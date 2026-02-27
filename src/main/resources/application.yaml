@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: portifolio-henrique
+server:
+  port: 1910
+
+config:
+  cors:
+    origins: ${CORS_ORIGINS:http://localhost:5173}
+  email:
+    api-key: ${RESEND_API_KEY:sua_key_segura}
+    from: ${MAIL_FROM:ababaabbab@gmail.com}
+    to: ${MAIL_TO:dadwadwadw@gmail.com}
+    mail-subject: ${MAIL_SUBJECT:Novo contato recebido}
