@@ -22,10 +22,10 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 
 # Expõe a porta 80 conforme solicitado
-EXPOSE 80
+EXPOSE 1910
 
 # Configura as variáveis de ambiente base para a JVM rodar na porta 80
-ENV SERVER_PORT=80
+ENV SERVER_PORT=1910
 
 # Comando para rodar a aplicação
 ENTRYPOINT ["java", "-jar", "app.jar"]
