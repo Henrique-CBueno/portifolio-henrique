@@ -1,5 +1,7 @@
 package com.bsys.portifoliohenrique.domain.portifolio.entity.projects;
 
+import java.util.List;
+
 public class Projects {
     private String title;
     private String subtitle;

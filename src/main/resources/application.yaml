@@ -1,6 +1,8 @@
 spring:
   application:
     name: portifolio-henrique
+  mongodb:
+    uri: ${MONGO_URI:mongodb://rootuser:securepassword@localhost:27017/portfolio?authSource=admin}
 server:
   port: 1910
 
