@@ -1,0 +1,8 @@
+services:
+  mongoDb:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: rootuser
+      MONGO_INITDB_ROOT_PASSWORD: securepassword
+    ports:
+      - "27017:27017"
