@@ -14,3 +14,11 @@ config:
     from: ${MAIL_FROM:ababaabbab@gmail.com}
     to: ${MAIL_TO:dadwadwadw@gmail.com}
     mail-subject: ${MAIL_SUBJECT:Novo contato recebido}
+
+
+minio:
+  url: ${MINIO_URL:http://localhost:9000}
+  access-key: ${MINIO_ACCESS_KEY:admin}
+  secret-key: ${MINIO_SECRET_KEY:password123}
+  bucket: ${MINIO_BUCKET:portifolio}
+  url-expiry-minutes: ${MINIO_URL_EXPIRY_MINUTES:15}
