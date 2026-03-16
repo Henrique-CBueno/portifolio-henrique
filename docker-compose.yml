@@ -1,0 +1,20 @@
+services:
+  mongoDb:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: rootuser
+      MONGO_INITDB_ROOT_PASSWORD: securepassword
+    ports:
+      - "27017:27017"
+  minio:
+    image: quay.io/minio/minio:latest # Use the official image from quay.io
+    container_name: minio
+    ports:
+      - "9000:9000" # API port
+      - "9001:9001" # Console UI port
+    environment:
+      MINIO_ROOT_USER: admin
+      MINIO_ROOT_PASSWORD: password123
+    volumes:
+      - ./minio_data:/data # Mount a local directory to the container's data directory
+    command: server /data --console-address ":9001"
