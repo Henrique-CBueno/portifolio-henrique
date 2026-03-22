@@ -1,6 +1,14 @@
 spring:
   application:
     name: portifolio-henrique
+  mongodb:
+    uri: ${MONGO_URI:mongodb://rootuser:securepassword@localhost:27017/portfolio?authSource=admin}
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${ISSUER_URI:http://localhost:8080/realms/portfolio}
+
 server:
   port: 1910
 
@@ -12,3 +20,17 @@ config:
     from: ${MAIL_FROM:ababaabbab@gmail.com}
     to: ${MAIL_TO:dadwadwadw@gmail.com}
     mail-subject: ${MAIL_SUBJECT:Novo contato recebido}
+
+
+minio:
+  url: ${MINIO_URL:http://localhost:9000}
+  access-key: ${MINIO_ACCESS_KEY:admin}
+  secret-key: ${MINIO_SECRET_KEY:password123}
+  bucket: ${MINIO_BUCKET:portifolio}
+  url-expiry-minutes: ${MINIO_URL_EXPIRY_MINUTES:15}
+
+keycloak:
+  KEYCLOAK_URL: ${KEYCLOAK_URL:http://localhost:8080}
+  REALM: ${KEYCLOAK_REALM:portfolio}
+  CLIENT_ID: ${KEYCLOAK_CLIENT:back}
+  CLIENT_SECRET: ${KEYCLOAK_SECRET:sKWgbtzwkv5xNrEHkIQeEnJ7z6b1x4iB}

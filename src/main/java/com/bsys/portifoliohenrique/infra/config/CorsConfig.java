@@ -1,4 +1,4 @@
-package com.bsys.portifoliohenrique.config;
+package com.bsys.portifoliohenrique.infra.config;
 
 import lombok.Getter;
 import lombok.extern.java.Log;
