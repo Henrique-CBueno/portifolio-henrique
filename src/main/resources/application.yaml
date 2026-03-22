@@ -3,6 +3,7 @@ spring:
     name: portifolio-henrique
   mongodb:
     uri: ${MONGO_URI:mongodb://rootuser:securepassword@localhost:27017/portfolio?authSource=admin}
+    database: ${MONGO_DB:portfolio}
   security:
     oauth2:
       resourceserver:
